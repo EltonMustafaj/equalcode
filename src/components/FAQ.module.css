@@ -1,0 +1,91 @@
+.teamSection {
+    padding: 100px 0;
+    background-color: var(--background);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 2.75rem;
+    line-height: 1.1;
+    max-width: 400px;
+}
+
+.description {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+}
+
+.description p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+.teamCard {
+    display: flex;
+    background: white;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    height: 480px;
+}
+
+.imageContainer {
+    flex: 2;
+    position: relative;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.infoCard {
+    flex: 1;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoTitle {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+}
+
+.infoText {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .teamCard {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .imageContainer {
+        height: 300px;
+    }
+}

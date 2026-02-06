@@ -1,0 +1,90 @@
+.navbar {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: var(--radius-full);
+    padding: 6px 6px 6px 20px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+}
+
+.logoItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoImage {
+    object-fit: contain;
+    mix-blend-mode: multiply;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.links a {
+    color: #444;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    transition: all 0.3s ease;
+}
+
+.links a:hover {
+    color: #000;
+    background: rgba(0, 0, 0, 0.04);
+}
+
+.contactLink {
+    background: #000;
+    color: #fff !important;
+}
+
+.contactLink:hover {
+    background: #222 !important;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        top: 16px;
+        width: 90%;
+    }
+
+    .container {
+        padding: 4px 4px 4px 12px;
+        gap: 12px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .links a {
+        padding: 6px 10px;
+        font-size: 0.65rem;
+    }
+
+    .logoImage {
+        width: 36px !important;
+        height: 36px !important;
+    }
+}

@@ -1,0 +1,121 @@
+.hero {
+    padding-top: 180px;
+    padding-bottom: 120px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.topBadge {
+    background: rgba(0, 0, 0, 0.05);
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.title {
+    font-size: 5.5rem;
+    line-height: 0.95;
+    margin-bottom: 32px;
+    letter-spacing: -0.05em;
+    color: var(--primary);
+}
+
+.arrow {
+    display: inline-block;
+    font-weight: 300;
+    font-family: sans-serif;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 48px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+}
+
+.bookButton {
+    background: var(--primary);
+    color: white;
+    padding: 16px 32px;
+    border-radius: var(--radius-full);
+    font-size: 1.125rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.bookButton:hover {
+    transform: translateY(-2px);
+    background: #111;
+}
+
+.buttonArrow {
+    background: var(--accent);
+    color: black;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.marqueeWrapper {
+    margin-top: 120px;
+    padding: 32px 0;
+    background: #000;
+    transform: rotate(-1deg) scale(1.1);
+    width: 120%;
+    margin-left: -10%;
+    display: flex;
+    align-items: center;
+}
+
+.marquee {
+    display: flex;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+    color: white;
+    gap: 60px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: 140px;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .marqueeWrapper {
+        margin-top: 80px;
+    }
+}

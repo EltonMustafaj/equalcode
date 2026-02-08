@@ -11,58 +11,53 @@
 }
 
 .container {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: var(--radius-full);
-    padding: 6px 6px 6px 20px;
+    padding: 8px 8px 8px 24px;
     display: flex;
     align-items: center;
-    gap: 32px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+    gap: 120px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
 }
 
 .logoItem {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
-
-.logoImage {
-    object-fit: contain;
-    mix-blend-mode: multiply;
 }
 
 .links {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
 }
 
 .links a {
-    color: #444;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    padding: 8px 16px;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    padding: 10px 20px;
     border-radius: var(--radius-full);
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .links a:hover {
-    color: #000;
-    background: rgba(0, 0, 0, 0.04);
+    background: rgba(0, 0, 0, 0.05);
 }
 
 .contactLink {
     background: #000;
     color: #fff !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .contactLink:hover {
-    background: #222 !important;
-    transform: translateY(-1px);
+    background: #111 !important;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 @media (max-width: 768px) {

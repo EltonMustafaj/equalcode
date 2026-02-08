@@ -123,13 +123,37 @@
 @media (max-width: 768px) {
     .hero {
         padding-top: 140px;
+        padding-bottom: 80px;
     }
 
     .title {
-        font-size: 3rem;
+        font-size: 3.5rem;
+        letter-spacing: -0.04em;
+    }
+
+    .wordHighlight {
+        padding: 0 6px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 10px;
+        margin-bottom: 40px;
     }
 
     .marqueeWrapper {
-        margin-top: 80px;
+        margin-top: 60px;
+        padding: 20px 0;
+    }
+
+    .marquee {
+        font-size: 1rem;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.5rem;
     }
 }

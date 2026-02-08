@@ -62,24 +62,43 @@
 
 @media (max-width: 768px) {
     .navbar {
-        top: 16px;
-        width: 90%;
+        top: 12px;
+        width: 95%;
     }
 
     .container {
-        padding: 4px 4px 4px 12px;
-        gap: 12px;
+        padding: 6px 6px 6px 12px;
+        gap: 0;
         width: 100%;
         justify-content: space-between;
     }
 
-    .links a {
-        padding: 6px 10px;
-        font-size: 0.65rem;
+    .links {
+        gap: 4px;
     }
 
-    .logoImage {
-        width: 36px !important;
-        height: 36px !important;
+    .links a {
+        padding: 8px 12px;
+        font-size: 0.7rem;
+        font-weight: 800;
+    }
+
+    .contactLink {
+        padding: 8px 16px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 4px 4px 4px 8px;
+    }
+
+    .links a {
+        padding: 6px 8px;
+        font-size: 0.6rem;
+    }
+
+    .contactLink {
+        padding: 6px 12px !important;
     }
 }

@@ -1,0 +1,40 @@
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #000;
+}
+
+.iconWrapper {
+    position: relative;
+    width: 36px;
+    height: 36px;
+}
+
+.logoText {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 1.1rem;
+    letter-spacing: -0.04em;
+}
+
+@media (max-width: 768px) {
+    .logoContainer {
+        gap: 8px;
+    }
+
+    .iconWrapper {
+        width: 28px;
+        height: 28px;
+    }
+
+    .logoText {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logoText {
+        display: none;
+    }
+}

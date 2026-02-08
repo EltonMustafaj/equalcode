@@ -180,4 +180,10 @@
     .index {
         margin-top: 0.6rem;
     }
+
+    .learnMore {
+        opacity: 1;
+        transform: translateX(0);
+        font-size: 0.65rem;
+    }
 }

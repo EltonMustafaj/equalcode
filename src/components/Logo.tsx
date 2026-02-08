@@ -1,23 +1,12 @@
-'use client';
-
-import React from 'react';
+import styles from './Logo.module.css';
 
 const Logo = () => {
     return (
-        <div style={{
-            display: 'flex',
-            alignItems: 'center',
-            gap: '12px',
-            fontFamily: 'inherit',
-            fontWeight: 800,
-            fontSize: '1.25rem',
-            letterSpacing: '-0.04em',
-            color: '#000',
-        }}>
-            <div style={{ position: 'relative', width: '36px', height: '36px' }}>
+        <div className={styles.logoContainer}>
+            <div className={styles.iconWrapper}>
                 <svg
-                    width="36"
-                    height="36"
+                    width="100%"
+                    height="100%"
                     viewBox="0 0 40 40"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -39,7 +28,7 @@ const Logo = () => {
                     <circle cx="30" cy="30" r="1.5" fill="black" />
                 </svg>
             </div>
-            <span style={{ textTransform: 'uppercase', fontSize: '1.1rem' }}>Equalcode</span>
+            <span className={styles.logoText}>Equalcode</span>
         </div>
     );
 };

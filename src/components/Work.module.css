@@ -1,5 +1,5 @@
 .work {
-    padding: 160px 0;
+    padding: 120px 0;
     background: #fff;
 }
 
@@ -13,14 +13,14 @@
     display: flex;
     align-items: center;
     gap: 32px;
-    margin-bottom: 80px;
+    margin-bottom: 60px;
 }
 
 .title {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.15em;
     margin: 0;
     white-space: nowrap;
     color: #888;
@@ -54,7 +54,7 @@
 }
 
 .index {
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 700;
     font-family: monospace;
     opacity: 0.3;
@@ -62,7 +62,7 @@
 }
 
 .workTitle {
-    font-size: 5rem;
+    font-size: 5.5rem;
     font-weight: 800;
     margin: 0;
     letter-spacing: -0.04em;
@@ -101,21 +101,12 @@
 .tag {
     font-size: 0.7rem;
     font-weight: 800;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.12em;
     color: #000;
-    background: #f8f8f8;
-    padding: 6px 12px;
+    background: #f5f5f5;
+    padding: 6px 14px;
     border-radius: 4px;
-}
-
-.learnMore {
-    font-size: 0.75rem;
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    color: #000;
-    opacity: 0;
-    transform: translateX(-10px);
-    transition: all 0.4s ease;
+    text-transform: uppercase;
 }
 
 .itemBorder {
@@ -129,17 +120,11 @@
 
 .workItem:hover {
     background: #fafafa;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
 }
 
 .workItem:hover .workTitle {
     transform: translateX(10px);
-}
-
-.workItem:hover .learnMore {
-    opacity: 1;
-    transform: translateX(0);
 }
 
 .workItem:hover .itemBorder {
@@ -147,26 +132,36 @@
     height: 2px;
 }
 
-@media (max-width: 968px) {
+@media (max-width: 1024px) {
+    .workTitle {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 850px) {
     .workItem {
         flex-direction: column;
         gap: 32px;
         padding: 40px 0;
     }
 
-    .workTitle {
-        font-size: 3.5rem;
-    }
-
     .workRight {
         max-width: 100%;
         padding-left: 60px;
     }
+
+    .work {
+        padding: 80px 0;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+    .container {
+        padding: 0 24px;
+    }
+
     .workTitle {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
     }
 
     .workLeft {
@@ -181,9 +176,17 @@
         margin-top: 0.6rem;
     }
 
-    .learnMore {
-        opacity: 1;
-        transform: translateX(0);
-        font-size: 0.65rem;
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .workItem:hover {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 380px) {
+    .workTitle {
+        font-size: 2.2rem;
     }
 }

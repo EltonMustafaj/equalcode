@@ -143,6 +143,10 @@
     .bentoGrid {
         grid-template-columns: 1fr;
     }
+
+    .features {
+        padding: 60px 0;
+    }
 }
 
 @media (max-width: 600px) {
@@ -152,5 +156,21 @@
 
     .statCard.black {
         grid-column: span 1;
+    }
+
+    .card {
+        padding: 30px 20px;
+    }
+
+    .cardHeader {
+        font-size: 1.5rem;
+    }
+
+    .statValue {
+        font-size: 2.2rem;
+    }
+
+    .servicesCard {
+        min-height: auto;
     }
 }

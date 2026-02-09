@@ -81,6 +81,7 @@
     align-items: center;
     gap: 12px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
 }
 
 .bookButton:hover {
@@ -154,6 +155,22 @@
 
 @media (max-width: 480px) {
     .title {
-        font-size: 2.5rem;
+        font-size: 2.8rem;
+    }
+
+    .hero {
+        padding-top: 110px;
+        padding-bottom: 60px;
+    }
+
+    .topBadge {
+        font-size: 0.65rem;
+        margin-bottom: 24px;
+    }
+}
+
+@media (max-width: 360px) {
+    .title {
+        font-size: 2.2rem;
     }
 }

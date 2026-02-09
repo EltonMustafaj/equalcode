@@ -1,58 +1,204 @@
 .footer {
-    padding: 60px 0;
-    background: white;
-    border-top: 1px solid #eee;
+    position: relative;
+    padding: 160px 0 60px;
+    background: #fff;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    text-align: center;
+}
+
+.gridTexture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .container {
-    max-width: 1100px;
+    position: relative;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
+    z-index: 2;
 }
 
-.top {
+.topStatement {
+    margin-bottom: 80px;
+}
+
+.topStatement p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #666;
+    letter-spacing: -0.01em;
+}
+
+.ctaSection {
+    margin-bottom: 120px;
+}
+
+.mainCta {
+    display: inline-block;
+    padding: 24px 60px;
+    background: transparent;
+    border: 1px solid #000;
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 800;
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.mainCta:hover {
+    background: #000;
+    color: #fff;
+    transform: scale(1.02);
+}
+
+.subText {
+    margin-top: 24px;
+    font-size: 0.85rem;
+    color: #888;
+    font-weight: 500;
+}
+
+.presenceRow {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 60px;
+    padding: 40px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    margin-top: 60px;
 }
 
-.links {
-    display: flex;
-    gap: 32px;
+.timeWrapper {
+    position: relative;
+    cursor: default;
 }
 
-.links a {
-    font-size: 0.8rem;
-    color: #444;
+.presenceLabel {
+    font-size: 0.9rem;
     font-weight: 700;
+    color: #000;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    transition: color 0.3s ease;
 }
 
-.links a:hover {
+.tooltip {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #000;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    white-space: nowrap;
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #000;
+}
+
+.timeWrapper:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.presenceLink {
+    font-size: 0.9rem;
+    font-weight: 700;
     color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    position: relative;
+    transition: transform 0.3s ease;
 }
 
-.bottom {
-    padding-top: 40px;
-    text-align: left;
-    font-size: 0.75rem;
-    color: #999;
-    font-weight: 500;
-    letter-spacing: 0.02em;
+.presenceLink::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: #000;
+    transition: width 0.3s ease;
 }
 
-@media (max-width: 600px) {
-    .top {
+.presenceLink:hover::after {
+    width: 100%;
+}
+
+.presenceLink:hover {
+    transform: translateY(-2px);
+}
+
+.bottomDetail {
+    margin-top: 60px;
+}
+
+.bottomDetail p {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #aaa;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .presenceRow {
         flex-direction: column;
-        align-items: flex-start;
         gap: 40px;
     }
 
-    .links {
-        flex-direction: column;
-        gap: 16px;
+    .footer {
+        padding-top: 100px;
+    }
+
+    .mainCta {
+        padding: 20px 40px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainCta {
+        font-size: 1.1rem;
+        padding: 16px 30px;
+        width: 100%;
+    }
+
+    .topStatement p {
+        font-size: 1rem;
+    }
+
+    .ctaSection {
+        margin-bottom: 80px;
+    }
+
+    .footer {
+        padding-top: 80px;
     }
 }

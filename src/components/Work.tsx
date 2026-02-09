@@ -71,7 +71,6 @@ const Work = () => {
                                     <p className={styles.workDesc}>{item.desc}</p>
                                     <div className={styles.tagLine}>
                                         <span className={styles.tag}>{item.tag}</span>
-                                        <span className={styles.learnMore}>LEARN MORE →</span>
                                     </div>
                                 </div>
                             </div>

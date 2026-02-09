@@ -64,14 +64,19 @@ const Hero = () => {
                 </p>
 
                 <div className={styles.actions} ref={ctaRef}>
-                    <button className={styles.bookButton}>
+                    <a
+                        href="https://instagram.com/equalcode"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.bookButton}
+                    >
                         Get in touch
                         <span className={styles.buttonArrow}>
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
                                 <path d="M7 17l9.2-9.2M17 17V7H7" />
                             </svg>
                         </span>
-                    </button>
+                    </a>
                 </div>
             </div>
 

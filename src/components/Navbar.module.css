@@ -91,26 +91,26 @@
 @media (max-width: 480px) {
     .navbar {
         top: 10px;
-        padding: 0 10px;
+        padding: 0 8px;
     }
 
     .container {
-        padding: 5px 5px 5px 10px;
-        gap: 10px;
+        padding: 4px 4px 4px 10px;
+        gap: 8px;
+    }
+
+    .links {
+        gap: 2px;
     }
 
     .links a {
-        padding: 8px 10px;
-        font-size: 0.7rem;
-    }
-
-    .links a:not(.contactLink) {
-        display: none;
-        /* Hide Services/Work on very small phones to keep it clean */
+        padding: 8px 6px;
+        font-size: 0.65rem;
+        letter-spacing: 0.02em;
     }
 
     .contactLink {
-        padding: 8px 16px !important;
-        font-size: 0.75rem;
+        padding: 8px 12px !important;
+        font-size: 0.7rem;
     }
 }

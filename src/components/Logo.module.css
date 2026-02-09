@@ -97,7 +97,14 @@
 }
 
 @media (max-width: 480px) {
+    .logoContainer {
+        gap: 6px;
+    }
+
     .logoText {
-        display: none;
+        font-size: 0.75rem;
+        letter-spacing: -0.02em;
+        display: block;
+        /* Ensure it is visible */
     }
 }

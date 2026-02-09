@@ -31,7 +31,8 @@
 .links {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 0;
+    /* Removing gap to control spacing entirely via padding for precision */
 }
 
 .links a {
@@ -39,7 +40,8 @@
     font-size: 0.8rem;
     font-weight: 800;
     letter-spacing: 0.08em;
-    padding: 10px 20px;
+    padding: 10px 15px;
+    /* Reduced side padding slightly */
     border-radius: var(--radius-full);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -91,21 +93,21 @@
 @media (max-width: 480px) {
     .navbar {
         top: 10px;
-        padding: 0 8px;
+        padding: 0 12px;
     }
 
     .container {
-        padding: 4px 4px 4px 10px;
-        gap: 8px;
+        padding: 4px 4px 4px 12px;
+        gap: 12px;
     }
 
     .links {
-        gap: 2px;
+        gap: 0;
     }
 
     .links a {
-        padding: 8px 6px;
-        font-size: 0.65rem;
+        padding: 8px 8px;
+        font-size: 0.7rem;
         letter-spacing: 0.02em;
     }
 

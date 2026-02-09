@@ -3,12 +3,61 @@
     align-items: center;
     gap: 12px;
     color: #000;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.logoContainer:hover {
+    transform: scale(1.02);
+}
+
+.logoContainer:active {
+    transform: scale(1.08);
+    /* Slightly smaller scale for mobile click for better control */
 }
 
 .iconWrapper {
     position: relative;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.spinningRing {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    border-top-color: #ffd200;
+    animation: spin 1.5s linear infinite;
+}
+
+.logoImageWrapper {
     width: 36px;
     height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    border: 1px solid #eee;
+}
+
+.logoImage {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
 }
 
 .logoText {
@@ -18,14 +67,29 @@
     letter-spacing: -0.04em;
 }
 
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 @media (max-width: 768px) {
     .logoContainer {
         gap: 8px;
     }
 
     .iconWrapper {
-        width: 28px;
-        height: 28px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .logoImageWrapper {
+        width: 30px;
+        height: 30px;
     }
 
     .logoText {

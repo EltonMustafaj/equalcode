@@ -63,12 +63,13 @@
 @media (max-width: 768px) {
     .navbar {
         top: 12px;
-        width: 95%;
+        width: 100%;
+        padding: 0 16px;
     }
 
     .container {
         padding: 6px 6px 6px 12px;
-        gap: 0;
+        gap: 20px;
         width: 100%;
         justify-content: space-between;
     }
@@ -78,27 +79,38 @@
     }
 
     .links a {
-        padding: 8px 12px;
-        font-size: 0.7rem;
-        font-weight: 800;
+        padding: 10px 14px;
+        font-size: 0.75rem;
     }
 
     .contactLink {
-        padding: 8px 16px !important;
+        padding: 10px 20px !important;
     }
 }
 
 @media (max-width: 480px) {
+    .navbar {
+        top: 10px;
+        padding: 0 10px;
+    }
+
     .container {
-        padding: 4px 4px 4px 8px;
+        padding: 5px 5px 5px 10px;
+        gap: 10px;
     }
 
     .links a {
-        padding: 6px 8px;
-        font-size: 0.6rem;
+        padding: 8px 10px;
+        font-size: 0.7rem;
+    }
+
+    .links a:not(.contactLink) {
+        display: none;
+        /* Hide Services/Work on very small phones to keep it clean */
     }
 
     .contactLink {
-        padding: 6px 12px !important;
+        padding: 8px 16px !important;
+        font-size: 0.75rem;
     }
 }
